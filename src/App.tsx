@@ -16,7 +16,7 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "230px 1fr",
       }}
     >
       <GridItem area="nav">
@@ -25,7 +25,10 @@ function App() {
 
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
-          <GenresList onSelectedGenre={(genre) => setselectedGenre(genre)} />
+          <GenresList
+            selectedGenre={selectedGenre}
+            onSelectedGenre={(genre) => setselectedGenre(genre)}
+          />
         </GridItem>
       </Show>
 
