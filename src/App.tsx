@@ -12,6 +12,7 @@ import Shorting from "./components/Shorting";
 export interface GameQuery {
   genre: Genres | null;
   platform: Platform | null;
+  sortOrder: string;
 }
 
 function App() {
@@ -51,7 +52,12 @@ function App() {
               setGameQuery({ ...gameQuery, platform })
             }
           />
-          <Shorting />
+          <Shorting
+            sortOrder={gameQuery.sortOrder}
+            onSelectedsortOrder={(sortOrder) =>
+              setGameQuery({ ...gameQuery, sortOrder })
+            }
+          />
         </HStack>
 
         <GameGrid gameQuery={gameQuery} />
