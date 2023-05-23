@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import GameGrid from "./components/GameGrid";
 import GenresList from "./components/GenresList";
 import Platformselector from "./components/Platformselector";
-
 import { Genres } from "./hooks/useGenres";
 import { Platform } from "./hooks/usePlatforms";
 import Shorting from "./components/Shorting";
